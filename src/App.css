@@ -114,4 +114,8 @@ button {
   font-size: 25px;
   text-align: center;
 }
+button {
+  background-color: #007aff;
+  color: white;
+}
 

@@ -22,6 +22,41 @@ function App() {
         .then((data) => setPlayers(data))
   },[])
 
+    function createNewPlayer() {
+        console.log(JSON.stringify({
+            id: 0,
+            number: number,
+            name: name,
+            url: url,
+            nationality: nationality,
+            height: height,
+            date: date,
+            tacheles: tacheles,
+            club: club
+        }))
+        fetch("http://localhost:8080/Spieler", {
+            method: "POST",
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                id: 0,
+                number: number,
+                name: name,
+                url: url,
+                nationality: nationality,
+                height: height,
+                date: date,
+                tacheles: tacheles,
+                club: club
+            })
+        })
+            .then((response) => response.json())
+            .then((data) => fetch("http://localhost:8080/Spieler")
+                .then((response) => response.json())
+                .then((data) => setPlayers(data)))
+    }
+
   return (
       <>
           <header id='header'>
@@ -70,6 +105,7 @@ function App() {
                       <td>{player.club}</td>
                   </tr>
               </table>
+              <button onClick={deletePlayer}>Löschen</button>
           </div>)}
 
           <p>Neuer Spieler hinzufügen</p>
@@ -109,7 +145,7 @@ function App() {
           </table>
           <div>
               <button onClick={() =>
-                  setPlayers({number, name, nationality, height, date, tacheles, club, url})
+                  createNewPlayer()
               }>Hinzufügen</button>
           </div>
           <img className='logoBottom'
