@@ -56,6 +56,12 @@ function App() {
                 .then((response) => response.json())
                 .then((data) => setPlayers(data)))
     }
+    function deletePlayer(id){
+        fetch('http://localhost:8080/Spieler/', { method: 'DELETE' })
+            .then(() => {
+                setPlayers(players.filter(p => p.id !== id))
+            });
+    }
 
   return (
       <>
@@ -105,7 +111,7 @@ function App() {
                       <td>{player.club}</td>
                   </tr>
               </table>
-              <button onClick={deletePlayer}>Löschen</button>
+              <button onClick={deletePlayer(player.id)}>Löschen</button>
           </div>)}
 
           <p>Neuer Spieler hinzufügen</p>
