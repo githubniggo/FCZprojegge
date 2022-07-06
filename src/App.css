@@ -36,3 +36,82 @@
     transform: rotate(360deg);
   }
 }
+
+.titelbild {
+  display: inline-block;
+  text-align: center;
+  height: 100%;
+}
+
+div {
+  text-align: center;
+}
+
+header {
+  width: 100%;
+  background-color: #000e31;
+  position: fixed;
+}
+
+body {
+  color: #fff;
+  background-color: #000e31;
+  margin-bottom: 20px;
+}
+
+img {
+  margin-top: 20px;
+}
+
+h1 {
+  font-size: 30px;
+  margin-bottom: 0px;
+}
+
+.logo {margin-top: 0px;}
+
+table {
+  margin-top: 20px;
+  border-top: solid white;
+  border-bottom: solid white;
+  margin-left:auto; margin-right:auto;
+  text-align: center;
+}
+
+.headerBottom {
+  background-color: #fff;
+
+  border-top: solid black;
+  border-bottom: solid black;
+}
+
+.logoBottom {
+  margin-top: 40px;
+}
+
+.hellblau {
+  margin-bottom: 20px;
+  height: 120px;
+  background-color: #007aff;
+  align-items: center;
+}
+
+p {
+  padding-top:40px;
+  font-family: Haettenschweiler;
+  font-size: 50px;
+}
+
+.fotoSpieler {
+  border: solid black;
+}
+
+button {
+  margin-top: 20px;
+  background-color: white;
+  font-family: Haettenschweiler;
+  height: 35px;
+  font-size: 25px;
+  text-align: center;
+}
+
